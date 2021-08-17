@@ -71,7 +71,7 @@ const App = ({ data }) => {
       ${count} Accidents`;
   }
 
-  const layers = [
+  const layers = ([
     new HexagonLayer({
       id: 'heatmap',
       colorRange,
@@ -81,6 +81,7 @@ const App = ({ data }) => {
       elevationScale: data && data.length ? 50 : 0,
       extruded: true,
       getPosition: d => d,
+      
       pickable: true,
       radius: 1000,
       upperPercentile: 100,
@@ -90,7 +91,12 @@ const App = ({ data }) => {
         elevationScale: 3000
       }
     })
-  ];
+  ]);
+
+  setTimeout(() => {
+    let subLayer = layers[0].getSubLayers()[0];
+    if (subLayer) console.log(subLayer.props.data.map(bin => ({ points: bin.points.map(pt => pt.source), position: bin.position })));
+  }, 500);
 
   return (
     <div className='app'>
