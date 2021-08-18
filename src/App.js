@@ -59,3 +59,31 @@ const App = ({ data }) => {
 }
 
 export default App;
+
+// PASTE THE CODE BELOW INTO CESIUM SANDCASTLE: https://sandcastle.cesium.com/
+
+// const viewer = new Cesium.Viewer('cesiumContainer');
+
+// const generateHexagon = (center, radius) => {
+//   center = Cesium.Cartesian3.fromDegrees(...center);
+//   const vertices = [];
+//   for (let i = 0; i < 6; i++) {
+//     const x = center.x + radius * Math.cos(Cesium.Math.PI_OVER_THREE * i);
+//     const y = center.y + radius * Math.sin(Cesium.Math.PI_OVER_THREE * i);
+//     vertices.push(new Cesium.Cartesian3(x, y, center.z));
+//   }
+//   return vertices;
+// };
+
+// const purplePolygonUsingRhumbLines = viewer.entities.add({
+//   name: 'A single 3D Hexbin of the aggregated data from the deck.gl example',
+//   polygon: {
+//     hierarchy: generateHexagon([-0.19850456546298084, 51.50172199331492], 1000),
+//     extrudedHeight: 43 * 1000,
+//     material: Cesium.Color.YELLOW,
+//     outline: true,
+//     outlineColor: Cesium.Color.GOLD
+//   },
+// });
+
+// viewer.zoomTo(viewer.entities);
