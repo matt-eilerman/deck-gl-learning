@@ -75,7 +75,7 @@ export default App;
 //   return vertices;
 // };
 
-// const purplePolygonUsingRhumbLines = viewer.entities.add({
+// const single3DHexbin = viewer.entities.add({
 //   name: 'A single 3D Hexbin of the aggregated data from the deck.gl example',
 //   polygon: {
 //     hierarchy: generateHexagon([-0.19850456546298084, 51.50172199331492], 1000),
